@@ -1,0 +1,37 @@
+
+.one{
+    background-color: hsl(240, 50%, 95%);
+}
+
+    .one .no1 article{
+        width: 300px;
+        flex-shrink: 0;
+
+        max-width: 100%;
+        min-height: 18vmax;
+
+        margin: 0 4vmax;
+        margin-bottom: 5vh;
+    }
+
+    .one .no1 img{
+        width: 18vmax;
+        height: 18vmax;
+        padding: 2vmax;
+        margin-bottom: 5vh;
+    
+        border-radius: 5px;
+        background-color: hsl(240, 100%, 70%);
+    
+        filter: drop-shadow(0 0 10px hsla(240, 100%, 70%, 0.5));
+    }
+
+    .one .no1 h1{
+        font-size: 6.4rem;
+        color: hsl(240, 100%, 70%);
+        font-weight: 700;
+
+        white-space: normal;
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+    }
