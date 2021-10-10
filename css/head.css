@@ -96,7 +96,7 @@
     .head .menu{
         width: 100%;
         min-height: 140px;
-        padding: 20px;
+        padding: 10px;
 
         position: absolute;
         top: 70px;
@@ -105,6 +105,7 @@
 
         opacity: 1;
         background-color: hsl(240, 50%, 95%);
+        filter: drop-shadow(0 6px 3px hsla(240, 20%, 20%, 0.2));
         transition: 200ms ease;
     }
 
@@ -133,6 +134,74 @@
         background-color: hsl(240, 100%, 70%);
         transition: 200ms ease;
     }
+
+    .head .menu > div{
+        display: flex;
+        flex: 1 1 auto;
+        width: 100px;
+        flex-wrap: wrap;
+    }
+
+        .head .menu a.article{
+            cursor: pointer;
+
+            display: flex;
+            flex: none;
+            width: 280px;
+            height: auto;
+            margin: 10px;
+            padding: 15px;
+
+            background-color: hsl(240, 50%, 95%);
+            transition: 200ms ease;
+            border-radius: 10px;
+        }
+
+        .head .menu a.article:hover{
+            background-color: hsl(240, 50%, 90%);
+        }
+
+        .head .menu .img{
+            flex: none;
+            width: 50px;
+            height: 50px;
+            margin-right: 15px;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            border-radius: 10px;
+            background-color: hsl(240, 20%, 20%);
+            filter: drop-shadow(0 0 2px hsla(240, 20%, 20%, 0.2));
+        }
+
+            .head .menu .img svg{
+                width: 26px;
+                height: 26px;
+
+                fill: white;
+            }
+
+        .head .menu h3{
+            margin-top: 2px;
+            font-size: 1.6rem;
+            font-weight: 700;
+            width: max-content;
+        }
+
+        .head .menu a.article:hover h3{
+            background-image: linear-gradient(to top, hsl(240, 80%, 80%) 4px, transparent 4px);
+        }
+
+        .head .menu p{
+            margin-top: 10px;
+            line-height: 1.8rem;
+            font-size: 1.4rem;
+            color: hsl(240, 20%, 50%);
+        }
+
+        
 
 /* middle of page with title */
 
@@ -231,6 +300,23 @@
     .head .left li{
         margin: 0;
     }
+    .head .menu{
+        padding: 0px;
+        flex-direction: column-reverse;
+        align-items: center;
+        justify-content: flex-end;
+    }
+        .head .menu > div{
+            width: 100%;
+            flex-wrap: nowrap;
+            flex-direction: column;
+            align-items: center;
+            overflow: auto;
+        }
+        .head .menu .close{
+            margin: 20px 20px 20px 0;
+            align-self: flex-end;
+        }
     .head main{
         flex-direction: column;
         font-size: 0.8rem;

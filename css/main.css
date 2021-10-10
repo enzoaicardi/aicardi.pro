@@ -16,6 +16,10 @@
     color: hsl(240, 20%, 20%);
 }
 
+.roboto{
+    font-family: 'Roboto', Arial, Helvetica, sans-serif;
+}
+
 .condensed{
     font-family: 'Roboto Condensed', Arial, Helvetica, sans-serif;
 }

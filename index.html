@@ -14,12 +14,16 @@
     <link rel="stylesheet" href="css/head.css">
     <link rel="stylesheet" href="css/one.css">
 
+    <link rel="shortcut icon" href="favicon.png" type="image/png">
+
 </head>
 <body>
     
     <section class="head _vh _flex -j-space">
 
         <header class="condensed _flex -j-space -row">
+
+            <!-- burger -->
             <div class="nav">
                 <li></li>
                 <li></li>
@@ -28,17 +32,99 @@
 
             <div class="left _flex -row">
                 <li>Aicardi.pro</li>
-                <li>L'agence</li>
-                <li>Services</li>
-                <li>Contact</li>
+                <li data-content="prestations">Prestations de services</li>
+                <li data-content="contact">Contact</li>
                 <svg class="close"><use xlink:href="#close"></use></svg>
             </div>
 
             <div class="right"></div>
                 
             <div class="menu hidden _flex -row -j-space">
-                <div>
-                    transition
+                <!-- block content -->
+                <div class="roboto contact">
+                    <a class="article" href="tel:+33782075276">
+                        <div class="img">
+                            <svg><use fill="white" xlink:href="#icon-call"></use></svg>
+                        </div>
+                        <div class="content">
+                            <h3>07 82 07 52 76</h3>
+                            <p>Prise de rendez-vous pour tout type de prestation</p>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="roboto prestations">
+
+                    <a class="article">
+                        <div class="img">
+                            <svg><use fill="hsl(210, 100%, 65%)" xlink:href="#icon-monitor"></use></svg>
+                        </div>
+                        <div class="content">
+                            <h3>Dépannage informatique</h3>
+                            <p>Si vous avez un problème quelconque sur votre ordinateur</p>
+                        </div>
+                    </a>
+
+                    <a class="article">
+                        <div class="img">
+                            <svg><use fill="hsl(190, 100%, 65%)" xlink:href="#icon-course"></use></svg>
+                        </div>
+                        <div class="content">
+                            <h3>Cours d'informatique</h3>
+                            <p>Apprendre à utiliser un ordinateur et prendre les bons réflexes</p>
+                        </div>
+                    </a>
+
+                    <a class="article">
+                        <div class="img">
+                            <svg><use fill="hsl(230, 100%, 75%)" xlink:href="#icon-design"></use></svg>
+                        </div>
+                        <div class="content">
+                            <h3>Web Design</h3>
+                            <p>Imagination et programmation de votre futur site web</p>
+                        </div>
+                    </a>
+                    
+                    <a class="article">
+                        <div class="img">
+                            <svg><use fill="hsl(50, 100%, 65%)" xlink:href="#icon-card"></use></svg>
+                        </div>
+                        <div class="content">
+                            <h3>Infographie</h3>
+                            <p>Réaliser vos cartes de visite, flyers et autre visuels</p>
+                        </div>
+                    </a>
+
+                    <a class="article">
+                        <div class="img">
+                            <svg><use fill="hsl(0, 100%, 65%)" xlink:href="#icon-pencil"></use></svg>
+                        </div>
+                        <div class="content">
+                            <h3>Logos</h3>
+                            <p>Création de votre logo, première identité de votre entreprise</p>
+                        </div>
+                    </a>
+
+                    <a class="article">
+                        <div class="img">
+                            <svg><use fill="hsl(30, 100%, 65%)" xlink:href="#icon-build"></use></svg>
+                        </div>
+                        <div class="content">
+                            <h3>Montage PC</h3>
+                            <p>Montage de votre ordinateur personnel et installation de votre système</p>
+                        </div>
+                    </a>
+
+                    <a class="article">
+                        <div class="img">
+                            <svg><use fill="hsl(140, 100%, 65%)" xlink:href="#icon-secure"></use></svg>
+                        </div>
+                        <div class="content">
+                            <h3>Conseil & Achat</h3>
+                            <p>Conseil pour l'achat d'un ordinateur et économie d'argent sur l'achat</p>
+                        </div>
+                    </a>
+
                 </div>
                 <svg class="close"><use xlink:href="#close"></use></svg>
             </div>
@@ -61,16 +147,9 @@
 
     </section>
 
-    <section class="one _vh">
+    <!-- <section class="one _vh">
 
-        <section class="section no1 _flex -row -j-center -wrap">
-            <img src="img/logo/logo_aicardi.pro-gradient.svg">
-            <article class="--grow">
-                <h1 class="condensed">Une agence de design web</h1>
-            </article>
-        </section>
-
-    </section>
+    </section> -->
 
     <svg class="go-to-top"><use xlink:href="#go-to-top"></use></svg>
 
@@ -78,11 +157,38 @@
 
     <svg aria-hidden="true" style="position: absolute; width: 0; height: 0; overflow: hidden;" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
     <defs>
+        <!-- navigation -->
         <symbol id="go-to-top" viewBox="0 0 448 512">
             <path d="M0 432V80c0-26.51 21.49-48 48-48h352c26.51 0 48 21.49 48 48v352c0 26.51-21.49 48-48 48H48c-26.51 0-48-21.49-48-48zm355.515-140.485l-123.03-123.03c-4.686-4.686-12.284-4.686-16.971 0L92.485 291.515c-7.56 7.56-2.206 20.485 8.485 20.485h246.059c10.691 0 16.045-12.926 8.486-20.485z"/>
         </symbol>
         <symbol id="close" viewBox="0 0 24 24">
             <path d="M18.984 6.422l-5.578 5.578 5.578 5.578-1.406 1.406-5.578-5.578-5.578 5.578-1.406-1.406 5.578-5.578-5.578-5.578 1.406-1.406 5.578 5.578 5.578-5.578z"></path>
+        </symbol>
+
+        <!-- prestations -->
+        <symbol id="icon-build" viewBox="0 0 24 24">
+            <path d="M15 5.484q0-1.453 1.031-2.461t2.484-1.008 2.461 1.008 1.008 2.461-1.008 2.484-2.461 1.031-2.484-1.031-1.031-2.484zM14.344 17.766l1.406-1.406 4.266 4.219-1.453 1.406zM15.047 12.797q0.281 0.281 0.281 0.703t-0.281 0.703l-2.813 2.859q-0.281 0.281-0.703 0.281t-0.703-0.281l-8.531-8.484q-0.281-0.281-0.281-0.703t0.281-0.703l2.859-2.859q0.281-0.281 0.703-0.281t0.703 0.281z"></path>
+        </symbol>
+        <symbol id="icon-card" viewBox="0 0 24 24">
+            <path d="M18 18.984v-1.406q0-1.359-2.063-2.227t-3.938-0.867-3.938 0.867-2.063 2.227v1.406h12zM12 6.984q-1.219 0-2.109 0.891t-0.891 2.109 0.891 2.109 2.109 0.891 2.109-0.891 0.891-2.109-0.891-2.109-2.109-0.891zM12 3q-0.422 0-0.703 0.281t-0.281 0.703 0.281 0.727 0.703 0.305 0.703-0.305 0.281-0.727-0.281-0.703-0.703-0.281zM18.984 3q0.797 0 1.406 0.609t0.609 1.406v13.969q0 0.797-0.609 1.406t-1.406 0.609h-13.969q-0.797 0-1.406-0.609t-0.609-1.406v-13.969q0-0.797 0.609-1.406t1.406-0.609h4.172q0.328-0.891 1.078-1.453t1.734-0.563 1.734 0.563 1.078 1.453h4.172z"></path>
+        </symbol>
+        <symbol id="icon-secure" viewBox="0 0 24 24">
+            <path d="M9.984 17.016l8.016-8.016-1.406-1.406-6.609 6.563-2.578-2.578-1.406 1.406zM12 0.984l9 4.031v6q0 4.172-2.578 7.617t-6.422 4.383q-3.844-0.938-6.422-4.383t-2.578-7.617v-6z"></path>
+        </symbol>
+        <symbol id="icon-design" viewBox="0 0 24 24">
+            <path d="M3 13.5h8.016v8.016h-8.016v-8.016zM12.984 17.484q0-1.875 1.313-3.188t3.188-1.313 3.188 1.313 1.313 3.188-1.313 3.188-3.188 1.313-3.188-1.313-1.313-3.188zM12 2.016l5.484 9h-10.969z"></path>
+        </symbol>
+        <symbol id="icon-course" viewBox="0 0 24 24">
+            <path d="M12 8.016q-1.219 0-2.109-0.891t-0.891-2.109 0.891-2.109 2.109-0.891 2.109 0.891 0.891 2.109-0.891 2.109-2.109 0.891zM12 11.531q3.75-3.516 9-3.516v10.969q-5.203 0-9 3.563-3.797-3.563-9-3.563v-10.969q5.25 0 9 3.516z"></path>
+        </symbol>
+        <symbol id="icon-pencil" viewBox="0 0 24 24">
+            <path d="M20.719 7.031l-1.828 1.828-3.75-3.75 1.828-1.828q0.281-0.281 0.703-0.281t0.703 0.281l2.344 2.344q0.281 0.281 0.281 0.703t-0.281 0.703zM3 17.25l11.063-11.063 3.75 3.75-11.063 11.063h-3.75v-3.75z"></path>
+        </symbol>
+        <symbol id="icon-monitor" viewBox="0 0 24 24">
+            <path d="M20.016 3h-16.031q-0.797 0-1.383 0.586t-0.586 1.43v10.969q0 0.844 0.586 1.43t1.383 0.586h3l-0.984 0.984v2.016h12v-2.016l-0.984-0.984h3q0.797 0 1.383-0.586t0.586-1.43v-10.969q0-0.844-0.586-1.43t-1.383-0.586zM20.016 15.984h-16.031v-10.969h16.031v10.969z"></path>
+        </symbol>
+        <symbol id="icon-call" viewBox="0 0 24 24">
+            <path d="M20.016 15.375q0.422 0 0.703 0.281t0.281 0.703v3.469q0 1.172-0.984 1.172-6.984 0-12-5.016t-5.016-12q0-0.984 1.172-0.984h3.469q0.422 0 0.703 0.281t0.281 0.703q0 1.828 0.563 3.516 0.188 0.609-0.234 1.031l-1.922 1.688q2.156 4.5 6.891 6.797l1.547-1.969q0.281-0.281 0.703-0.281 0.234 0 0.328 0.047 1.688 0.563 3.516 0.563z"></path>
         </symbol>
     </defs>
     </svg>

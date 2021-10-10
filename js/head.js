@@ -11,7 +11,7 @@ var closeHead = head.querySelector('.close');
 for(var i=1; i<li.length; i++){
     li[i].addEventListener('click', function(e){
         select(e);
-        showMenu(e);
+        showMenu(e.currentTarget.dataset.content);
     }, {passive:true});
 }
 
@@ -19,7 +19,12 @@ closeMenu.addEventListener('click', maskMenu, {passive:true});
 closeHead.addEventListener('click', maskHead, {passive:true});
 nav.addEventListener('click', showHead, {passive:true});
 
-function showMenu(e){
+function showMenu(d){
+    var navs = document.querySelectorAll('.head .menu > div');
+    for(var i=0; i<navs.length; i++){
+        if(navs[i].classList.contains(d)){navs[i].classList.remove('none'); continue;}
+        navs[i].classList.add('none');
+    }
     menubar.classList.remove('hidden');
 }
 
@@ -38,6 +43,11 @@ function showHead(){
 }
 function maskHead(){
     head.classList.remove('visible');
+}
+
+var content = {
+    prestations: ``,
+    contact: ``
 }
 
 })();
