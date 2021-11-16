@@ -1,10 +1,10 @@
 
 (function(){
 
-var li = document.querySelectorAll('.head .left li:nth-child(n+1)');
-var menubar = document.querySelector('.head .menu');
-var head = document.querySelector('.head .left');
-var nav = document.querySelector('.head .nav');
+var li = $$('.head .left li:nth-child(n+1)');
+var menubar = $('.head .menu');
+var head = $('.head .left');
+var nav = $('.head .nav');
 var closeMenu = menubar.querySelector('.close');
 var closeHead = head.querySelector('.close');
 
@@ -20,17 +20,20 @@ closeHead.addEventListener('click', maskHead, {passive:true});
 nav.addEventListener('click', showHead, {passive:true});
 
 function showMenu(d){
-    var navs = document.querySelectorAll('.head .menu > div');
-    for(var i=0; i<navs.length; i++){
-        if(navs[i].classList.contains(d)){navs[i].classList.remove('none'); continue;}
-        navs[i].classList.add('none');
+    var c = $('.head .menu > div.v');
+    var n = $('.head .menu > div.'+d);
+    
+    if(c !== n){
+        if(c){c.classList.remove('v');}
+        n.classList.add('v');
     }
+    
     menubar.classList.remove('hidden');
 }
 
-function maskMenu(e){
+function maskMenu(){
 
-    var selected = document.querySelector('.head li.select');
+    var selected = $('.head li.select');
 
     menubar.classList.add('hidden');
     selected.classList.remove('select');
@@ -43,11 +46,6 @@ function showHead(){
 }
 function maskHead(){
     head.classList.remove('visible');
-}
-
-var content = {
-    prestations: ``,
-    contact: ``
 }
 
 })();

@@ -45,10 +45,15 @@ body{
 
 /* structure */
 
-.section{
+section.part{
 
     width: 100%;
-    max-width: 1080px;
-    padding: 10vh 5vw;
+    min-height: 100vh;
+    height: auto;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
 
 }
