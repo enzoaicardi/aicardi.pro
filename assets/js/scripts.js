@@ -9,6 +9,7 @@ var nav = qs('nav', header);
 // switch color mode
 qs('.header-right', header).addEventListener('click', function(){
     document.body.classList.toggle('dark_mode');
+    localStorage.setItem('color-mode', document.body.getAttribute('class'));
 }, {passive: true});
 
 // mobile menu
