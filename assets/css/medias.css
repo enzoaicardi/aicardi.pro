@@ -21,9 +21,6 @@
 }
 
 @media screen and (max-height: 380px) {
-    .global-header{
-        position: initial;
-    }
     body{
         padding-top: 0;
     }
