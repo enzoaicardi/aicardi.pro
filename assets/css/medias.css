@@ -1,0 +1,119 @@
+
+
+@media screen and (max-width: 800px) {
+    .global-squares{
+        display: none;
+    }
+    .global-header{
+        background-image: none;
+        background-color: var(--color-60p);
+        padding-bottom: 0;
+    }
+        .global-header .back{
+            display: none;
+        }
+
+    body{
+        --size-base: 0.8px;
+        --gap-base: 0.8px;
+        --title-base: 0.8rem;
+    }
+}
+
+@media screen and (max-height: 380px) {
+    .global-header{
+        position: initial;
+    }
+    body{
+        padding-top: 0;
+    }
+}
+
+@media screen and (max-width: 700px),
+       screen and (max-height: 440px) {
+
+    .header-left .menu{
+        display: flex;
+    }
+
+    .header-left nav{
+        position: fixed;
+        visibility: hidden;
+        top: 0; left: 0;
+        width: 100vw;
+        height: 100vh;
+        
+        background-color: var(--color-60p);
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .header-left nav.v{
+        visibility: visible;
+    }
+
+        .header-left nav > *,
+        .header-left nav > *:last-child{
+            margin: 0;
+            margin-left: var(--gap-mega);
+            margin-bottom: var(--gap-normal);
+            height: var(--size-normal);
+        }
+
+        .header-left nav.v > *{
+            margin-left: 0px;
+            transition: margin-left 300ms ease;
+        }
+
+    body{
+        --size-base: 0.7px;
+    }
+
+    .part-equipe .us{
+        flex-direction: column;
+    }
+    .part-equipe .center{
+        display: none;
+    }
+    .part-equipe .enzo{
+        padding-bottom: 0;
+    }
+
+}
+
+@media screen and (max-width: 580px) {
+    body{
+        --size-base: 0.6px;
+        --gap-base: 0.6px;
+        --title-base: 0.6rem;
+        --minmax-normal: 220px;
+    }
+    .part-accueil .display{
+        flex-direction: column;
+    }
+    .part-accueil .display > *{
+        width: max-content;
+        max-width: 70%;
+    }
+    .part-accueil .display .title{
+        margin-top: var(--gap-small);
+        order: 2;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    body > section{
+        padding: var(--gap-mega) var(--gap-medium);
+    }
+    .part-prestations article > p{
+        padding-left: 0;
+    }
+    [data-core-square] > *{
+        width: 80px;
+        height: 80px;
+        margin-right: var(--gap-small);
+    }
+}

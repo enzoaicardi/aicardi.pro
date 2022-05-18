@@ -1,197 +1,174 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aicardi.pro | Création digitale pour professionnels</title>
 
-    <title>Aicardi.pro</title>
-
-    <link rel="stylesheet" href="css/assets/workspace.css">
-    <link rel="stylesheet" href="css/assets/layout.css">
-    <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="css/head.css">
-    <link rel="stylesheet" href="css/one.css">
-
-    <link rel="shortcut icon" href="favicon.png" type="image/png">
-
+    <link rel="stylesheet" href="./assets/workspace/workspace.css">
+    <link rel="stylesheet" href="./assets/workspace/workclass.css">
+    <link rel="stylesheet" href="./assets/css/components.css">
+    <link rel="stylesheet" href="./assets/css/styles.css">
+    <link rel="stylesheet" href="./assets/css/medias.css">
 </head>
-<body>
-    
-    <section class="part head">
+<body class="">
+    <small-dom>
 
-        <header class="condensed">
+        # Squares
+        div.global-squares
+        
+        # Global page header
+        header.global-header
 
-            <!-- burger -->
-            <div class="nav">
-                <li></li>
-                <li></li>
-                <li></li>
-            </div>
+            img!.back [src](./assets/img/header-background.svg) [draggable](false)
 
-            <div class="left">
-                <li>Aicardi.pro</li>
-                <li data-content="prestations">Prestations</li>
-                <li data-content="contact">Contact</li>
-                <svg class="close"><use xlink:href="#close"></use></svg>
-            </div>
+            div.header-left
 
-            <div class="right"></div>
+                div.menu +span.material-icons "menu" span.material-icons.close "close"
+                img!.logo [src](./assets/img/logo.pro.flat.svg)
+                nav
+                    a.v "Accueil"   [data-target](accueil)
+                    a "Prestations" [data-target](prestations)
+                    a "L'équipe"    [data-target](equipe)
+                    a "Contact"     [data-target](contact)
+
+            div.header-right
+
+                span.material-icons.v "light_mode"
+                span.material-icons "dark_mode"
+
+        # First section (Accueil)
+        section.part-accueil
+
+            div.display
+
+                div.title
+                    h1 "Aicardi"
+                    p.pro ".pro"
+                img! [src](./assets/img/avatar-f-ordinateur.svg)
+
+            div [data-core-box]
+                span.material-icons-outlined "info"
+                p +b "Aicardi" +marker ".pro" --" est une entreprise qui vous accompagne dans vos projets de developpement digital web & e-commerce, à travers la réalisation de sites, logos et maquettes numériques."
+
+        # Second section (Prestations)
+        section.part-prestations
+
+            h2 +span "Les" -" Prestations"
+
+            # Boxes
+            div [data-core-square]
+                figure.v
+                    span.material-icons-outlined "terminal"
+                    figcaption "Web Design"
+                figure
+                    span.material-icons-outlined "design_services"
+                    figcaption "Maquettes Numériques"
+
+                figure
+                    span.material-icons-outlined "brush"
+                    figcaption "Logos & Identité"
+
+            div [data-core-box]
+                span.material-icons-outlined "info"
+                p +b "La" +marker " création" --" et la conception de site web ou web design est la conception de l'interface web : l’architecture interactionnelle, l’organisation des pages, l’arborescence et la navigation dans un site web."
+
+            # Service info
+            article.v
+                h4 "Boutique en ligne"
+                p {Vous pouvez opter pour la mise en place d'un site web E-Commerce, avec son interface de boutique personnalisée, sa gestion des utilisateurs et clients, ainsi qu'un tableau de bord. Cela veut dire que vous disposerez d'une boutique en ligne à partir de laquelle vous pouvez ajouter des produits, recevoir des commandes, mettre en place une gestion des stocks, analyser vos recettes, et encore bien d'autres choses.}
+                    {Vous trouverez un exemple en } +a "suivant ce lien." [href](https://aicardi.website)
+                h4 "Site web statique"
+                p {Sinon vous pouvez choisir la mise en place d'un site Vitrine, il s'agit d'un site statique (c'est à dire sans interface d'administration) qui vise à promouvoir des produits, lieux, marques, etc… en affichant des contenus variés sur différentes pages. Un site vitrine peut par exemple afficher les catégories de produits qui sont vendus, les prestations proposées, des images, des vidéos, des liens, ou encore un formulaire de contact interactif.}
+                h4 "Blog, Site d’information"
+                p {Sur la même grille tarifaire que la boutique en ligne vous pouvez opter pour la mise en place d’un blog ou site d’information avec une gestion des actualités des articles, et des utilisateurs.}
+
+            article
+                h4 "Maquettes de site"
+                p {Vous pouvez demander la réalisation d'une maquette pour votre futur ou nouveau site web, afin d'entrer plus tard dans le codage de cette maquette. Il s'agit d'un premier apperçu de ce que pourrait être votre site. Elle doit donc être harmonieuse, lisible, et techniquement réalisable.}
+                h4 "Maquettes de Com'"
+                p {Nous mettons aussi nos compétences à votre disposition pour la réalisation de vos visuels tels que les flyers, cartes de visite, dépliants, posters, affiches, menus, tarifs, etc...}
+               
+            article
+                h4 "Création de logos"
+                p {Le logo est la première rencontre entre le client et votre marque, produit, service. Cette première impression est crutiale et doit savoir capter votre clientelle. Nous mettons ici notre savoir faire à votre disposition, vous pouvez même consulter nos créations en }
+                    a "suivant ce lien." [href](https://lino.aicardi.pro/creations)
+                h4 "Identité graphique"
+                p {L'identité graphique est la pierre angulaire de votre stratégie de communication, c'est elle qui définit la norme à suivre dans vos projets numériques et visuels.}
                 
-            <div class="menu hidden">
-                <!-- block content -->
-                <div class="roboto contact">
-                    <a class="article" href="tel:+33782075276">
-                        <div class="img">
-                            <svg><use fill="white" xlink:href="#icon-call"></use></svg>
-                        </div>
-                        <div class="content">
-                            <h3>07 82 07 52 76</h3>
-                            <p>Prise de rendez-vous pour tout type de prestation</p>
-                        </div>
-                    </a>
-                </div>
+            # Downloads
+            footer.dl
+                a [data-core-box](1) [href](./assets/pdf/Presentation des services.pdf) [download]
+                    span.material-icons-outlined "file_present"
+                    p +b "Présentation des services"
 
-                <div class="roboto prestations">
+                a [data-core-box](1) [href](./assets/pdf/Financer son site E-Commerce.pdf) [download]
+                    span.material-icons-outlined "file_present"
+                    p +b "Financer son site"
 
-                    <!-- <a class="article">
-                        <div class="img">
-                            <svg><use fill="hsl(210, 100%, 65%)" xlink:href="#icon-monitor"></use></svg>
-                        </div>
-                        <div class="content">
-                            <h3>Dépannage informatique</h3>
-                            <p>Si vous avez un problème quelconque sur votre ordinateur</p>
-                        </div>
-                    </a>
 
-                    <a class="article">
-                        <div class="img">
-                            <svg><use fill="hsl(190, 100%, 65%)" xlink:href="#icon-course"></use></svg>
-                        </div>
-                        <div class="content">
-                            <h3>Cours d'informatique</h3>
-                            <p>Apprendre à utiliser un ordinateur et prendre les bons réflexes</p>
-                        </div>
-                    </a> -->
+        # Third section (Equipe)
+        section.part-equipe
 
-                    <a class="article">
-                        <div class="img">
-                            <svg><use fill="hsl(230, 100%, 75%)" xlink:href="#icon-design"></use></svg>
-                        </div>
-                        <div class="content">
-                            <h3>Web Design</h3>
-                            <p>Imagination et codage de votre futur site web</p>
-                        </div>
-                    </a>
-                    
-                    <a class="article">
-                        <div class="img">
-                            <svg><use fill="hsl(50, 100%, 65%)" xlink:href="#icon-card"></use></svg>
-                        </div>
-                        <div class="content">
-                            <h3>Infographie</h3>
-                            <p>Réaliser vos cartes de visite, menus, flyers et autre visuels</p>
-                        </div>
-                    </a>
+            h2 +span "Nous" -" Sommes"
 
-                    <a class="article">
-                        <div class="img">
-                            <svg><use fill="hsl(0, 100%, 65%)" xlink:href="#icon-pencil"></use></svg>
-                        </div>
-                        <div class="content">
-                            <h3>Logos</h3>
-                            <p>Création de votre logo, première identité de votre entreprise</p>
-                        </div>
-                    </a>
+            div.us
 
-                    <!-- <a class="article">
-                        <div class="img">
-                            <svg><use fill="hsl(30, 100%, 65%)" xlink:href="#icon-build"></use></svg>
-                        </div>
-                        <div class="content">
-                            <h3>Montage PC</h3>
-                            <p>Montage de votre ordinateur personnel et installation de votre système</p>
-                        </div>
-                    </a>
+                figure.enzo
+                    img! [src](./assets/img/photo-enzo.png)
 
-                    <a class="article">
-                        <div class="img">
-                            <svg><use fill="hsl(140, 100%, 65%)" xlink:href="#icon-secure"></use></svg>
-                        </div>
-                        <div class="content">
-                            <h3>Conseil & Achat</h3>
-                            <p>Conseil pour l'achat d'un ordinateur et économie d'argent sur l'achat</p>
-                        </div>
-                    </a> -->
+                    figcaption
+                        h3 +span "Enzo" -" Aicardi"
+                        p {24 ans, auto-entrepreneur passionné par le web et ses technologies, spécialisé dans le developpement d’interfaces frontales et la realisation de sites e-commerce.}
+                        a.member_button +img! [src](./assets/img/arrow.svg) p "Voir le portfolio"
 
-                </div>
-                <svg class="close"><use xlink:href="#close"></use></svg>
-            </div>
-        </header>
+                div.center +div.line div.circle div.line
 
-        <main>
-            <div class="title">
-                <h1>Aicardi</h1>
-                <p>.pro</p>
-            </div>
+                figure.lino
+                    img! [src](./assets/img/photo-lino.png)
 
-            <div class="avatar">
-                <img src="img/avatar/avatar-f-ordinateur.svg">
-            </div>
-        </main>
+                    figcaption
+                        h3 +span "Lino" -" Aicardi"
+                        p {22 ans, Graphiste freelance et étudiant en Master de sciences de l'environnement, passionné d'art et spécialisé dans la réalisation de logos et d'identités graphiques.}
+                        a.member_button +p "Voir le portfolio" img! [src](./assets/img/arrow.svg)
 
-        <footer>
-            <p></p>
-        </footer>
 
-    </section>
+        # Fourth section (Contact)
+        section.part-contact
 
-    <svg class="go-to-top"><use xlink:href="#go-to-top"></use></svg>
+            h2 +span "Entrer" -" en Contact"
 
-    <!-- SCRIPTS -->
+            div.line
+                div [data-core-box]
+                    span.material-icons-outlined "phone_in_talk"
+                    p "Par téléphone :"
+                        br! b "07 82 07 52 76"
+                
+                a.material-icons-outlined "whatsapp" [href](tel:+33782075276)
+                
+            div.line.mail
+                div [data-core-box](1)
+                    span.material-icons-outlined "mail"
+                    p "Par email :"
+                        br! b "aicardi.pro@gmail.com"
 
-    <script src="js/main.js"></script>
-    <script src="js/head.js"></script>
+                a.material-icons-outlined "send" [href](mailto:aicardi.pro@gmail.com)
 
-    <svg aria-hidden="true" style="position: absolute; width: 0; height: 0; overflow: hidden;" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <defs>
-        <!-- navigation -->
-        <symbol id="go-to-top" viewBox="0 0 448 512">
-            <path d="M0 432V80c0-26.51 21.49-48 48-48h352c26.51 0 48 21.49 48 48v352c0 26.51-21.49 48-48 48H48c-26.51 0-48-21.49-48-48zm355.515-140.485l-123.03-123.03c-4.686-4.686-12.284-4.686-16.971 0L92.485 291.515c-7.56 7.56-2.206 20.485 8.485 20.485h246.059c10.691 0 16.045-12.926 8.486-20.485z"/>
-        </symbol>
-        <symbol id="close" viewBox="0 0 24 24">
-            <path d="M18.984 6.422l-5.578 5.578 5.578 5.578-1.406 1.406-5.578-5.578-5.578 5.578-1.406-1.406 5.578-5.578-5.578-5.578 1.406-1.406 5.578 5.578 5.578-5.578z"></path>
-        </symbol>
+        footer
+            div.rubriques
+                h4 "Lancer un projet" h4 "Faire un devis" h4 "Avoir des informations" h4 "Obtenir de l'aide"
+            div.siret
+                p +b "Siret : " -"903 680 296 00014"
 
-        <!-- prestations -->
-        <symbol id="icon-build" viewBox="0 0 24 24">
-            <path d="M15 5.484q0-1.453 1.031-2.461t2.484-1.008 2.461 1.008 1.008 2.461-1.008 2.484-2.461 1.031-2.484-1.031-1.031-2.484zM14.344 17.766l1.406-1.406 4.266 4.219-1.453 1.406zM15.047 12.797q0.281 0.281 0.281 0.703t-0.281 0.703l-2.813 2.859q-0.281 0.281-0.703 0.281t-0.703-0.281l-8.531-8.484q-0.281-0.281-0.281-0.703t0.281-0.703l2.859-2.859q0.281-0.281 0.703-0.281t0.703 0.281z"></path>
-        </symbol>
-        <symbol id="icon-card" viewBox="0 0 24 24">
-            <path d="M18 18.984v-1.406q0-1.359-2.063-2.227t-3.938-0.867-3.938 0.867-2.063 2.227v1.406h12zM12 6.984q-1.219 0-2.109 0.891t-0.891 2.109 0.891 2.109 2.109 0.891 2.109-0.891 0.891-2.109-0.891-2.109-2.109-0.891zM12 3q-0.422 0-0.703 0.281t-0.281 0.703 0.281 0.727 0.703 0.305 0.703-0.305 0.281-0.727-0.281-0.703-0.703-0.281zM18.984 3q0.797 0 1.406 0.609t0.609 1.406v13.969q0 0.797-0.609 1.406t-1.406 0.609h-13.969q-0.797 0-1.406-0.609t-0.609-1.406v-13.969q0-0.797 0.609-1.406t1.406-0.609h4.172q0.328-0.891 1.078-1.453t1.734-0.563 1.734 0.563 1.078 1.453h4.172z"></path>
-        </symbol>
-        <symbol id="icon-secure" viewBox="0 0 24 24">
-            <path d="M9.984 17.016l8.016-8.016-1.406-1.406-6.609 6.563-2.578-2.578-1.406 1.406zM12 0.984l9 4.031v6q0 4.172-2.578 7.617t-6.422 4.383q-3.844-0.938-6.422-4.383t-2.578-7.617v-6z"></path>
-        </symbol>
-        <symbol id="icon-design" viewBox="0 0 24 24">
-            <path d="M3 13.5h8.016v8.016h-8.016v-8.016zM12.984 17.484q0-1.875 1.313-3.188t3.188-1.313 3.188 1.313 1.313 3.188-1.313 3.188-3.188 1.313-3.188-1.313-1.313-3.188zM12 2.016l5.484 9h-10.969z"></path>
-        </symbol>
-        <symbol id="icon-course" viewBox="0 0 24 24">
-            <path d="M12 8.016q-1.219 0-2.109-0.891t-0.891-2.109 0.891-2.109 2.109-0.891 2.109 0.891 0.891 2.109-0.891 2.109-2.109 0.891zM12 11.531q3.75-3.516 9-3.516v10.969q-5.203 0-9 3.563-3.797-3.563-9-3.563v-10.969q5.25 0 9 3.516z"></path>
-        </symbol>
-        <symbol id="icon-pencil" viewBox="0 0 24 24">
-            <path d="M20.719 7.031l-1.828 1.828-3.75-3.75 1.828-1.828q0.281-0.281 0.703-0.281t0.703 0.281l2.344 2.344q0.281 0.281 0.281 0.703t-0.281 0.703zM3 17.25l11.063-11.063 3.75 3.75-11.063 11.063h-3.75v-3.75z"></path>
-        </symbol>
-        <symbol id="icon-monitor" viewBox="0 0 24 24">
-            <path d="M20.016 3h-16.031q-0.797 0-1.383 0.586t-0.586 1.43v10.969q0 0.844 0.586 1.43t1.383 0.586h3l-0.984 0.984v2.016h12v-2.016l-0.984-0.984h3q0.797 0 1.383-0.586t0.586-1.43v-10.969q0-0.844-0.586-1.43t-1.383-0.586zM20.016 15.984h-16.031v-10.969h16.031v10.969z"></path>
-        </symbol>
-        <symbol id="icon-call" viewBox="0 0 24 24">
-            <path d="M20.016 15.375q0.422 0 0.703 0.281t0.281 0.703v3.469q0 1.172-0.984 1.172-6.984 0-12-5.016t-5.016-12q0-0.984 1.172-0.984h3.469q0.422 0 0.703 0.281t0.281 0.703q0 1.828 0.563 3.516 0.188 0.609-0.234 1.031l-1.922 1.688q2.156 4.5 6.891 6.797l1.547-1.969q0.281-0.281 0.703-0.281 0.234 0 0.328 0.047 1.688 0.563 3.516 0.563z"></path>
-        </symbol>
-    </defs>
-    </svg>
-            
+    </small-dom>
 
+    <script data-smalldom src="./assets/js/sdom.js"></script>
+    <script data-smalldom>smallDomReplace();</script>
+
+    <script src="./assets/workspace/workspace.js"></script>
+    <script src="./assets/js/crimson.js"></script>
+    <script src="./assets/js/scripts.js"></script>
+    
 </body>
 </html>

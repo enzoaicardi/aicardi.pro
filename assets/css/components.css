@@ -1,0 +1,115 @@
+
+/* titles */
+
+h2, h3{
+    font-size: var(--title-h2);
+    font-weight: var(--font-bold);
+    text-align: center;
+}
+
+h3{
+    font-size: var(--title-h3);
+}
+
+h2 span,
+h3 span{
+    color: var(--color-60p);
+}
+
+h4{
+    font-size: var(--text-normal);
+    font-weight: var(--font-semibold);
+
+    width: max-content;
+    padding: 0 calc(var(--gap-small) / 2);
+
+    background-image: linear-gradient(to top, var(--color-30p) 30%, transparent 30%);
+}
+
+/* data-core-box */
+
+[data-core-box]{
+    display: flex;
+    align-items: center;
+    padding: var(--gap-normal);
+
+    color: var(--color-true);
+    --color-link: var(--color-true);
+    border: 2px solid var(--color-true);
+    border-radius: var(--radius-small);
+}
+
+[data-core-box="1"]{
+    color: var(--color-false);
+    --color-link: var(--color-false);
+    border: 2px solid var(--color-false);
+}
+
+    [data-core-box] > span{
+        margin-right: var(--gap-normal);
+    }
+
+    [data-core-box] b{
+        font-weight: var(--font-semibold);
+    }
+
+    [data-core-box] marker{
+        color: var(--color-true);
+    }
+    [data-core-box="1"] marker{
+        color: var(--color-false);
+    }
+
+    [data-core-box] p{
+        color: var(--color-02);
+        flex: 1 1 auto;
+        word-wrap: break-word;
+    }
+
+/* data-core-square */
+
+[data-core-square]{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+    [data-core-square] > *{
+        cursor: pointer;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        width: var(--size-mega);
+        height: var(--size-mega);
+
+        text-align: center;
+        color: var(--color-60p);
+        border: 2px solid var(--color-60p);
+        border-radius: var(--radius-small);
+
+        margin-right: var(--gap-medium);
+    }
+
+    [data-core-square] > *:last-child{
+        margin-right: 0;
+    }
+
+    [data-core-square] > .v{
+        color: var(--color-1);
+        background-color: var(--color-60p);
+    }
+
+    [data-core-square] span{
+        font-size: var(--title-h2);
+    }
+
+    [data-core-square] figcaption{
+        margin-top: var(--gap-small);
+
+        font-weight: var(--font-medium);
+        font-size: var(--title-h4);
+    }
+    
