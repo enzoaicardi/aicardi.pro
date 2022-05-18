@@ -109,10 +109,16 @@ document.addEventListener('scroll', function(){
 
     scrollEventShouldWait = true;
     setTimeout(() => { 
+
         qs('.global-squares .v').classList.remove('v');
         squares[currentSection().id].classList.add('v');
+
+        qs('a.v', nav).classList.remove('v');
+        qs('a[data-target="'+currentSection().name+'"]', nav).classList.add('v');
+
         scrollEventShouldWait = false;
-    }, 400);
+        
+    }, 200);
 
 }, {passive:true});
 
