@@ -31,7 +31,7 @@ var sections = qsa('body > section');
 
 var easingCubic = function(x){ return 1 - Math.pow(1 - x, 3); }
 var scrollAnimation = crimson({
-    duration: 800,
+    duration: 500,
     easing: easingCubic
 });
 
@@ -118,7 +118,7 @@ document.addEventListener('scroll', function(){
 
         scrollEventShouldWait = false;
         
-    }, 200);
+    }, 500);
 
 }, {passive:true});
 
