@@ -300,13 +300,15 @@ body > section{
         border-radius: var(--radius-normal);
     }
 
-    .part-equipe .enzo{
+    .part-equipe figure{
         --global-color: var(--color-true);
+    }
+
+    .part-equipe .enzo{
         padding-bottom: calc(var(--gap-large) * 2);
     }
 
     .part-equipe .lino{
-        --global-color: var(--color-false);
         padding-top: calc(var(--gap-large) * 2);
     }
 
